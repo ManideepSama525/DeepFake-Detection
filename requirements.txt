@@ -1,0 +1,25 @@
+# Veritas — Deepfake Detection Backend
+# Install with: pip install -r requirements.txt
+
+# Core ML
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Flask API
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Face detection
+facenet-pytorch>=2.5.3
+
+# Computer vision
+opencv-python>=4.9.0
+
+# Data
+numpy>=1.26.0
+h5py>=3.9.0
+
+# Metrics (used in training scripts)
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+tqdm>=4.66.0

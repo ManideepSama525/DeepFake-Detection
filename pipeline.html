@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection Project Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .accent-glow {
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-300 min-h-screen pb-20">
+
+    <!-- Background Decor -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 pt-12">
+        <!-- Header -->
+        <header class="mb-12 border-l-4 border-cyan-500 pl-6 py-2">
+            <h1 class="text-4xl font-extrabold text-white tracking-tight mb-2 uppercase mono">
+                Deepfake Detection <span class="text-cyan-400">Project Journal</span>
+            </h1>
+            <p class="text-slate-400 text-lg font-light">A simplified table of actions, milestones, and implementation logs.</p>
+        </header>
+
+        <!-- Journal Content -->
+        <div class="space-y-4">
+            <!-- Stage 1 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md text-sm border border-cyan-500/20">01</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Dataset Acquisition</h2>
+                        <p class="text-cyan-400/80 text-sm italic mb-4">Selected and downloaded dataset from Kaggle</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Chose FaceForensics++ subset
+                                </li>
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Downloaded dataset
+                                </li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Explored folder structure
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md text-sm border border-cyan-500/20">02</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Dataset Selection & Organization</h2>
+                        <p class="text-cyan-400/80 text-sm italic mb-4">Selected small subset and organized data</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Picked 20-30 real videos
+                                </li>
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Picked 20-30 fake videos
+                                </li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Created <code class="bg-slate-800 px-1 text-pink-400 rounded">real/</code> and <code class="bg-slate-800 px-1 text-pink-400 rounded">fake/</code> folders
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md text-sm border border-cyan-500/20">03</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Environment Setup</h2>
+                        <p class="text-cyan-400/80 text-sm italic mb-4">Set up development environment</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm text-slate-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span> Configured Google Colab or local setup
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-slate-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span> Installed libraries (OpenCV, PyTorch, etc.)
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-slate-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span> Enabled GPU
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300 border-l-2 border-l-indigo-500">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-md text-sm border border-indigo-500/20">04</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Data Preprocessing</h2>
+                        <p class="text-indigo-400/80 text-sm italic mb-4">Converted videos into model-ready data</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-700">
+                                <div class="text-[10px] text-slate-500 uppercase font-bold mb-1">Tool</div>
+                                <div class="text-sm font-semibold">OpenCV</div>
+                            </div>
+                            <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-700">
+                                <div class="text-[10px] text-slate-500 uppercase font-bold mb-1">Method</div>
+                                <div class="text-sm font-semibold">Frame Skip</div>
+                            </div>
+                            <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-700">
+                                <div class="text-[10px] text-slate-500 uppercase font-bold mb-1">Focus</div>
+                                <div class="text-sm font-semibold">Face Detection</div>
+                            </div>
+                            <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-700">
+                                <div class="text-[10px] text-slate-500 uppercase font-bold mb-1">Resolution</div>
+                                <div class="text-sm font-semibold italic">224 x 224</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 5 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md text-sm border border-cyan-500/20">05</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Model Development</h2>
+                        <p class="text-cyan-400/80 text-sm italic mb-4">Built CNN model</p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-slate-800 text-xs px-2 py-1 rounded border border-slate-700">Architecture: CNN</span>
+                            <span class="bg-slate-800 text-xs px-2 py-1 rounded border border-slate-700">Loss: Binary Cross Entropy</span>
+                            <span class="bg-slate-800 text-xs px-2 py-1 rounded border border-slate-700">Optimizer: Adam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 6 & 7 (Combined for layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-panel rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="mono text-xs text-cyan-500">06</span>
+                        <h2 class="font-bold text-white uppercase tracking-wider text-sm">Model Training</h2>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-400">
+                        <li>• Split data (train/validation)</li>
+                        <li>• Trained over epochs</li>
+                        <li>• Monitored loss and accuracy</li>
+                    </ul>
+                </div>
+                <div class="glass-panel rounded-xl p-6 border-cyan-500/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="mono text-xs text-cyan-500">07</span>
+                        <h2 class="font-bold text-white uppercase tracking-wider text-sm">Model Evaluation</h2>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-400">
+                        <li>• Tested on unseen data</li>
+                        <li>• Calculated Accuracy, Precision, Recall</li>
+                        <li>• Generated confusion matrix</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stage 8 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="flex-none">
+                        <span class="mono bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-md text-sm border border-cyan-500/20">08</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-xl font-bold text-white mb-1">Prediction Pipeline</h2>
+                        <p class="text-cyan-400/80 text-sm italic mb-4">Built inference system</p>
+                        <div class="flex items-center text-xs text-slate-500 mono gap-2 mt-2">
+                            Video Input <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg> 
+                            Extraction <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                            Prediction <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                            Aggregate
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 9 & 10 -->
+            <div class="glass-panel rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300 bg-cyan-500/[0.02]">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="mono text-xs text-slate-500">09</span>
+                            <h2 class="font-bold text-white">Deployment <span class="text-xs text-slate-500 font-normal ml-2">(Optional)</span></h2>
+                        </div>
+                        <ul class="text-sm space-y-1 text-slate-400">
+                            <li>• Built UI using Streamlit/Flask</li>
+                            <li>• Enabled video upload and prediction</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="mono text-xs text-slate-500">10</span>
+                            <h2 class="font-bold text-white">Maintenance & Improvement</h2>
+                        </div>
+                        <ul class="text-sm space-y-1 text-slate-400">
+                            <li>• Added more data</li>
+                            <li>• Tried advanced models (ResNet)</li>
+                            <li>• Optimized pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-slate-600 text-xs mono">
+            &copy; 2024 DEEPFAKE DETECTION LAB // LOG_LEVEL: INFO
+        </footer>
+    </div>
+
+</body>
+</html>
